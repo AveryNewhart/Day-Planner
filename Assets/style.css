@@ -1,0 +1,94 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+
+
+#time-display {
+  color: black;
+}
+
+textarea {
+  background: transparent;
+  border: 1px solid black;
+  resize: none;  
+  color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.description {
+  white-space: pre-wrap; 
+}
+
+.time-block {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.row {
+  border-top: 1px solid white;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.past {
+  background-color: #d3d3d3;
+  color: black;
+}
+
+.present {
+  background-color: #ff6961;
+  color: black;
+}
+
+.future {
+  background-color: #77dd77;
+  color: black;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-section {
+  display: block;
+  text-align: center;
+  width: 100vw;
+}
+
+.big-btn {
+  width: 160px;
+  height: 95px;
+  margin-left: 170px;
+}
+
+
+.wide-text {
+  width: 1050px;
+}
