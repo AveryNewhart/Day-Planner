@@ -18,4 +18,4 @@
 
 ![screenshot of website](./Assets/day-planner-screenshot.png)
 
-- Link to webpage
+- Link to webpage https://averynewhart.github.io/Day-Planner/
