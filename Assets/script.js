@@ -22,13 +22,7 @@ let userInpHr15 = document.getElementById("user-inp-hr-15");
 let userInpHr16 = document.getElementById("user-inp-hr-16");
 let userInpHr17 = document.getElementById("user-inp-hr-17");
 
-
-
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html. 
-  
-
+// Setting the inputed text into the local sotrage
 saveBtnHr9.addEventListener("click", function() {
   let userInpHr9 = document.getElementById("user-inp-hr-9").value;
 
@@ -92,6 +86,7 @@ saveBtnHr17.addEventListener("click", function() {
 
 });
 
+// Getting and displaying the text from the local storage
 let userStoredDataHr9 = localStorage.getItem("userInpHr9");
 userInpHr9.textContent = userStoredDataHr9;
 
@@ -119,28 +114,7 @@ userInpHr16.textContent = userStoredDataHr16;
 let userStoredDataHr17 = localStorage.getItem("userInpHr17");
 userInpHr17.textContent = userStoredDataHr17;
 
- $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-});
-
+// Displaying the current date and time using dayjs
 function displayTime() {
   let rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss A');
   timeDisplayEl.text(rightNow);
@@ -149,6 +123,7 @@ function displayTime() {
 displayTime();
 setInterval(displayTime, 1000);
 
+// Displaying the current color blocks referencing the current time.
 function displayColors() {
   let time = dayjs().format("H");
 
@@ -165,15 +140,3 @@ function displayColors() {
 }
 
 displayColors();
-
-
-  // add class to row by comparing project date to today's date
-  //look back at 5 mini challenge
-  //if (projectDate.isBefore(today)) {
-    //rowEl.addClass('project-late');
-  //} else if (projectDate.isSame(today)) {
-    //rowEl.addClass('project-today');
-  //}ind
-
-
-  //have text pop up on the application when you click the save button saying "appt added to localStorage"
